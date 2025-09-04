@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    overflow: hidden;
+  }
+  
+  .letter {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    z-index: 1;
+    position: relative; /* keeps music button inside */
+  }
+  
+  h1 {
+    color: #e63946;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  /* Music button (inside the panel, top-right corner) */
+  .music-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #e63946;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .music-toggle:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Falling hearts */
+  .heart {
+    position: fixed;
+    top: -20px;
+    color: #e63946;
+    font-size: 24px;
+    animation: fall linear forwards;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+ /* Next page button (inside .letter, like music icon) */
+.next-btn {
+    position: absolute;
+    bottom: 15px;   /* distance from bottom edge of panel */
+    right: 15px;    /* distance from right edge of panel */
+    background: #e63946;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s, background 0.3s, opacity 0.5s;
+    opacity: 0;            /* hidden initially */
+    pointer-events: none;   /* not clickable until shown */
+  }
+  
+  .next-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .next-btn:hover {
+    transform: scale(1.2);
+    background: #d62828;
+  }
+  

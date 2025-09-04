@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="letter">
+    <!-- Music button (inside panel, top-right) -->
+    <i id="musicBtn" class="fa-solid fa-volume-xmark music-toggle"></i>
+
+    <!-- Add data attributes for typing -->
+    <h1 id="title" data-text=""></h1>
+    <p id="message" data-text="A muốn biết ngày hôm nay của e thế nào, màu sắc ưa thích của e là gì, chuyện gì làm phải e tự chịu đựng, ovtk, a muốn biết mọi thứ về e,..."></p>
+    
+    <!-- Next page button -->
+    <a href="page4.html" class="next-btn" id="nextBtn">
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+  </div>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
